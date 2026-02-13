@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legenda UD - Clavis Latina</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="index.html" class="header-brand">Clavis Latina</a>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="legenda-ud.html">Legenda UD</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span>&rarr;</span>
+      <span>Legenda UD</span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <div class="page-content">
+      <div class="container">
+        <h1 class="page-title">Legenda UD</h1>
+        
+        <!-- Intro Section -->
+        <div class="ud-intro">
+          <h3 class="section-title">Legenda Universal Dependencies (UD)</h3>
+          <p class="ud-subtitle">
+            Guida alle relazioni sintattiche utilizzate negli alberi degli esempi.
+          </p>
+          
+          <h4 class="ud-section-title">Cos'è la grammatica a dipendenze?</h4>
+          <p>
+            La grammatica a dipendenze è un modo per rappresentare la struttura di una frase come se fosse un albero di collegamenti tra parole. Invece di dividere la frase in soggetto, predicato, complemento… come si fa di solito, qui ci si concentra su <strong>quale parola dipende da quale altra</strong>.
+          </p>
+          <p style="margin-top: 12px;">
+            Ogni frase ha una parola centrale, di solito il verbo, che funziona come il cardine o <em>radice</em> della struttura. Le altre parole si collegano al verbo o ad altre parole attraverso delle relazioni, chiamate <strong>dipendenze</strong>.
+          </p>
+          
+          <!-- Example Section -->
+          <div style="margin-top: 32px;">
+            <p style="margin-bottom: 16px;"><strong>Per esempio:</strong></p>
+            
+            <div class="ud-example">
+              <div class="ud-example-text">
+                <span class="latin-text">Puella rosam amat</span>
+                <span class="translation">"La ragazza ama la rosa"</span>
+              </div>
+            </div>
+            
+            <div class="light-box" style="margin-top: 20px;">
+              <ul class="bullet-list">
+                <li><strong>amat</strong> è il centro (verbo)</li>
+                <li><strong>puella</strong> dipende dal verbo come soggetto</li>
+                <li><strong>rosam</strong> dipende dal verbo come oggetto</li>
+              </ul>
+            </div>
+            
+            <!-- Tree Image -->
+            <div class="ud-tree-image">
+              <img src="esempi/Ezempio-zero.jpg" alt="Albero sintattico: Puella rosam amat">
+            </div>
+          </div>
+          
+          <!-- Explanation -->
+          <div style="margin-top: 32px;">
+            <p>
+              Negli alberi sintattici che troverai in questo sito, le frecce mostrano proprio questi collegamenti. Le sigle accanto alle frecce indicano il tipo di relazione grammaticale (soggetto, oggetto, complemento, ecc.).
+            </p>
+            <p style="margin-top: 12px;">
+              In questo modo si può visualizzare la frase non solo come parole in fila, ma come una <strong>rete di relazioni</strong>.
+            </p>
+            <p style="margin-top: 12px;">
+              La seguente tabella presenta le principali etichette <strong>Universal Dependencies</strong> (standard internazionale per descrivere le relazioni grammaticali di dipendenza tra le parole) utilizzate negli alberi sintattici del sito, con la relativa corrispondenza nell'analisi logica tradizionale.
+            </p>
+          </div>
+        </div>
+        
+        <!-- UD Table -->
+        <section class="section">
+          <h2 class="section-title">Tabella delle etichette UD</h2>
+          <table class="ud-table">
+            <thead>
+              <tr>
+                <th>Etichetta</th>
+                <th>Analisi logica</th>
+                <th>Descrizione</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="ud-label">root</span></td>
+                <td class="ud-grammar">Predicato Principale</td>
+                <td>Il centro sintattico della frase.</td>
+              </tr>
+              <tr>
+                <td><span class="ud-label">nsubj</span></td>
+                <td class="ud-grammar">Soggetto</td>
+                <td>L'elemento che funge da soggetto grammaticale, anche all'interno dell'ablativo assoluto.</td>
+              </tr>
+              <tr>
+                <td><span class="ud-label">obj</span></td>
+                <td class="ud-grammar">Compl. Oggetto</td>
+                <td>L'elemento che riceve l'azione diretta del verbo.</td>
+              </tr>
+              <tr>
+                <td><span class="ud-label">advcl:abs</span></td>
+                <td class="ud-grammar">Ablativo Assoluto</td>
+                <td>Un'intera frase in ablativo (nome + participio) collegata alla principale.</td>
+              </tr>
+              <tr>
+                <td><span class="ud-label">advcl</span></td>
+                <td class="ud-grammar">Subordinata Avverbiale</td>
+                <td>Una frase subordinata che indica tempo, causa, fine, modo, ecc.</td>
+              </tr>
+              <tr>
+                <td><span class="ud-label">nmod</span></td>
+                <td class="ud-grammar">Compl. di Specificazione</td>
+                <td>Un nome che ne specifica un altro (solitamente in genitivo).</td>
+              </tr>
+              <tr>
+                <td><span class="ud-label">advmod</span></td>
+                <td class="ud-grammar">Compl. Avverbiale</td>
+                <td>Avverbio che modifica il verbo.</td>
+              </tr>
+              <tr>
+                <td><span class="ud-label">xcomp</span></td>
+                <td class="ud-grammar">Complemento Predicativo</td>
+                <td>Un verbo o aggettivo che completa il significato del verbo principale senza avere un proprio soggetto.</td>
+              </tr>
+              <tr>
+                <td><span class="ud-label">acl:relcl</span></td>
+                <td class="ud-grammar">Proposizione Relativa</td>
+                <td>Una frase che espande un nome.</td>
+              </tr>
+              <tr>
+                <td><span class="ud-label">cop / aux</span></td>
+                <td class="ud-grammar">Copula / Ausiliare</td>
+                <td>Il verbo sum usato come legame o supporto. Di solito non è il root, ma dipende dal verbo o dal nome principale.</td>
+              </tr>
+              <tr>
+                <td><span class="ud-label">punct</span></td>
+                <td class="ud-grammar">Punteggiatura</td>
+                <td>Segni grafici che delimitano le unità sintattiche.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; Clavis Latina – Progetto Digital Humanities - Gaia Eleonora Di Raimondo</p>
+    </div>
+  </footer>
+</body>
+</html>
